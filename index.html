@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riverland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hud">
+      <div>
+        <p class="eyebrow">River Escape</p>
+        <h1>Riverland</h1>
+        <p class="blurb">Guide the man across the raft, shift the raft's balance, and outrun the cliff while the river drags everything toward danger.</p>
+      </div>
+      <div class="metrics">
+        <div class="metric">
+          <span>Distance</span>
+          <strong id="distanceLabel">0 m</strong>
+        </div>
+        <div class="metric">
+          <span>Cliff Gap</span>
+          <strong id="gapLabel">Safe</strong>
+        </div>
+        <div class="metric">
+          <span>Status</span>
+          <strong id="statusLabel">Running</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="viewport">
+      <canvas id="game" width="1280" height="720" aria-label="Riverland game canvas"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="card">
+          <p class="eyebrow" id="overlayEyebrow">Controls</p>
+          <h2 id="overlayTitle">Escape the Cliff</h2>
+          <p id="overlayText">Move with <kbd>WASD</kbd> or <kbd>Arrow Keys</kbd>. Walking on the raft shifts its balance and changes how it steers through the river.</p>
+          <button id="startButton" type="button">Start Journey</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./game.js"></script>
+</body>
+</html>
